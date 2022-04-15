@@ -55,7 +55,8 @@ func (c compatibilityDriver) FindAllDriver(req cveSa.OeCompSearchRequest) (datas
 	if req.KeyWord != "" {
 		query = query.Where(
 			q.Where("driver_name like ?", "%"+req.KeyWord+"%").
-				Or("board_model like ?", "%"+req.KeyWord+"%"),
+				Or("board_model like ?", "%"+req.KeyWord+"%").
+				Or("chip_vendor like ?", "%"+req.KeyWord+"%"),
 		)
 	}
 	if err = query.Count(&total).Error; err != nil {

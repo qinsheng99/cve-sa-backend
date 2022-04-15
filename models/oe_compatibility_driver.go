@@ -40,7 +40,7 @@ type OeCompatibilityDriverResponse struct {
 	ChipVendor   string      `json:"chipVendor"`
 	Deviceid     interface{} `json:"deviceID"`
 	DownloadLink string      `json:"downloadLink"`
-	DriverDate   string      `json:"driverDate"`
+	DriverDate   string      `json:"date"`
 	DriverName   string      `json:"driverName"`
 	DriverSize   string      `json:"driverSize"`
 	Item         string      `json:"item"`
